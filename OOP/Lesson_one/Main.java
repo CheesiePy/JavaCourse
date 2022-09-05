@@ -7,7 +7,5 @@ public class Main {
         System.out.println(tal.add_two(1, 2));
         System.out.println(ari.add_two(1, 2));
         
-        
-        
     }
 }

@@ -1,16 +1,31 @@
-# java lesson one
+# Java lesson one
 
-## classes and objects
+## the four pillars of object oriented programming:
+    - Inheritance.
 
-## inheritance
-
-
-
-## four pillars:
-    - Inheritance. - extends 
-
-    - Encapsulation. -getters and setters
+    - Encapsulation.
 
     - Abstraction.
     
     - Polymorphism.
+
+
+---
+
+### Inheritance
+```java
+
+    public class Father(){
+        /*
+        * some code goes here
+        */
+    }
+
+    public class Son extends Father(){
+        /*
+        * Son will be a able to use anything that is not private from his father class
+        */
+    }
+
+```
+    

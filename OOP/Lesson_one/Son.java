@@ -1,16 +1,21 @@
 package OOP.Lesson_one;
-
+/*
+ * This is a class that is used to demonstrate the concept of inheritance.
+ * 
+ */
 public class Son extends Father {
-
+    // This is a constructor that is used to create a son object.
     public Son(int age) {
-        super();
+        super(); // This is a call to the constructor of the father class.
         this.setAge(age);
-        //TODO Auto-generated constructor stub
     }
 
-    
-    public void setAge(int name){
-
+    public void setAge(int number){
+        if (number < 0 || number > 18){
+            System.out.println("You are too young to be a son");
+        }else{
+            this.age = number;
+        }
     }
 
     @Override
