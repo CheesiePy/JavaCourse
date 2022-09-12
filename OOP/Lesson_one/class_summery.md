@@ -4,10 +4,12 @@
     - Inheritance.
 
     - Encapsulation.
-
+  
+    - Polymorphism.
+  
     - Abstraction.
     
-    - Polymorphism.
+
 
 
 ---
