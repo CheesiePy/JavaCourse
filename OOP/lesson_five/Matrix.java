@@ -16,16 +16,16 @@ public class Matrix{
 
     }
 
-    @Override
+    @Override // override דריסה
     public String toString(){
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for(int i = 0; i < this.size; i++){
             for(int j = 0; j < this.size; j++){
-                result += this.matrix[i][j].toString() + " ";
+                result.append(this.matrix[i][j].toString()).append(" ");
         }
-        result += "\n";  
+        result.append("\n");
     }
-       return result;
+       return result.toString();
 }
 
 
