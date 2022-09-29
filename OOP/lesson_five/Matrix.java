@@ -1,5 +1,6 @@
 package OOP.lesson_five;
 
+
 public class Matrix{
 
     Square[][] matrix;
@@ -14,6 +15,14 @@ public class Matrix{
             }
         }
 
+    }
+
+    public void setSquare(int i, int j, String symbol){
+        if ( ! this.matrix[i][j].getSymbol().equals("0") ){
+            System.out.println("This square is already taken");
+            return;
+        }
+        this.matrix[i][j] = new Square(symbol);
     }
 
     @Override // override דריסה

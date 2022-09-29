@@ -2,6 +2,9 @@ package OOP.Lesson_two;
 
 public class Dog extends Animal{ 
     
+    int age;
+
+
     public int add_one(int a, String b){
         return 1;
     }

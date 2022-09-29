@@ -7,8 +7,10 @@ public class Son extends Father {
     // This is a constructor that is used to create a son object.
     public Son(int age) {
         super(); // This is a call to the constructor of the father class.
+        this.age = 15;
         this.setAge(age);
     }
+
 
     public void setAge(int number){
         if (number < 0 || number > 18){

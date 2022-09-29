@@ -22,23 +22,29 @@ public class Main {
 //            }
 //        }
 
-        int n = 5;
-        int[] arry = new int[2];
-        int[][] matrix = new int[2][2];
-        arry[0] = 18;
-        arry[1] = 9;
+        // int n = 5;
+        // int[] arry = new int[2];
+        // int[][] matrix = new int[2][2];
+        // arry[0] = 18;
+        // arry[1] = 9;
 
-        matrix[0] = arry;
-        matrix[1] = arry;
+        // matrix[0] = arry;
+        // matrix[1] = arry;
 
-        for(int i=0; i < 3; i++){
-            for(int j = 0; j < 3; j++){
-                System.out.print(matrix[i][j] + " ");
-            }
-            System.out.println();
-        }
+        // int[][] matrix = new int[3][3];
 
+        // for(int i=0; i < 3; i++){
+        //     for(int j = 0; j < 3; j++){
+        //         System.out.print(matrix[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }
+
+        Matrix m = new Matrix(3);
+        m.setSquare(0, 0, "X");
+        m.setSquare(0, 0, "W");
+        System.out.println(m);
 
     }
-    
+
 }

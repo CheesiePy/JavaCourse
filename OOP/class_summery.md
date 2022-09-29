@@ -1,6 +1,7 @@
 # Java lesson one
 
 ## the four pillars of object oriented programming:
+
     - Inheritance. son is a father if son extands father 
 
     - Encapsulation.

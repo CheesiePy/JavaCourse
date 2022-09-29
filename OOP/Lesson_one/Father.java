@@ -4,21 +4,25 @@ package OOP.Lesson_one;
  * 
  */
 public class Father {
-    protected int age; // this is a protected variable that can be accessed by the child class.
+    static int count = 0;
+    public int age; // this is a protected variable that can be accessed by the child class.
     private String name; // this is a private variable that can only be accessed by the father class.
     private String hairColor;
 
     public Father(){
+        count++;
         this.age = 0;
         this.name = "No name";
         this.hairColor = "No hair color";
     }
 
     public Father(int age) {
+        count++;
         this.setAge(age);
     }
 
     public Father(int age, String name, String hairColor) {
+        count++;
         this.setAge(age);
         this.setName(name);
         this.setHairColor(hairColor);
