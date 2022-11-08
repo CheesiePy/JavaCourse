@@ -1,7 +1,7 @@
 package OOP.lesson_five;
 
 public class Square {
-    private Object symbol;
+    private Object symbol; // 
 
     public Square() {
         this.symbol = "0";
