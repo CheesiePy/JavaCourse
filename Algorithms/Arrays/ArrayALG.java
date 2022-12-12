@@ -3,16 +3,11 @@ package Algorithms.Arrays;
 public class ArrayALG{
 
     private int arr[];
-
-    public ArrayALG() {
-        
-        System.out.println("ArrayALG is init..");
-    }
-
-
+    private int size;
 
     public ArrayALG(int[] arr) {
         this.arr = arr;
+        this.size = arr.length;
         System.out.println("ArrayALG is init..");
     }
 
@@ -23,14 +18,47 @@ public class ArrayALG{
     }
 
     public void reverse() {
-        int[] B = new int[this.arr.length];
-        for (int i = this.arr.length -1; i >= 0; i--){
-            B[this.arr.length -1 - i] = this.arr[i];
+
+        int[] B = new int[size];
+
+        for (int i = size -1; i >= 0; i--){
+            B[size -1 - i] = this.arr[i];
         }
+
         this.arr = B;
+
     }
 
     public int sum(){
+
+        int sum = 0;
+
+        for( int i = 0; i < size; i++){
+            sum += this.arr[i];
+        }
+
+        return sum;
+    }
+
+
+
+    public int max(){
+        return 1;
+    }
+
+    public int min(){
+        int min = this.arr[0];
+
+        for(int i = 0; i < size ; i++){
+            if(arr[i] < min)
+                min = arr[i];
+        }
+
+        return min;
+    }
+
+    public int instanceOf(int a){
+        // return the number of time a appeard in the array.
         return 1;
     }
 

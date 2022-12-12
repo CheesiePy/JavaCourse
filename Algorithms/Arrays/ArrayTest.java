@@ -11,12 +11,12 @@ public class ArrayTest {
         // reverse arry
         arrALG.reverse();
         int sum = arrALG.sum();
-        
+        int min = arrALG.min();
 
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arrALG.getArr()[i] + " ");
 
         }
-        System.out.println(sum); // 57
+        System.out.println(min); // 57
     }
 }
