@@ -25,6 +25,5 @@ public class Main {
         String b = "world";
 
         System.out.println(ms.add(ms2));
-        
-    }
+
 }
