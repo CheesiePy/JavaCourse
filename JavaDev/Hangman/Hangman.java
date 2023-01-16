@@ -17,10 +17,11 @@ public static void main(String[] args) {
     BufferedReader reader = null;
     Random rand = new Random();
     int counter = 0;
+    String topic = "";
     try {    
         reader = new BufferedReader(new FileReader(filepath));
         
-        String topic = reader.readLine();
+        topic = reader.readLine();
         String line = "";
         while (line != null ) {
           line = reader.readLine();
@@ -54,7 +55,7 @@ public static void main(String[] args) {
     int maxIncorrectGuesses = 6;
     int incorrectGuesses = 0;
     Scanner scanner = new Scanner(System.in);
-    // System.out.println("Topic: " + topic);
+    System.out.println("Topic: " + topic);
     while (incorrectGuesses < maxIncorrectGuesses) {
       System.out.println("Guess a letter in the word: " + hiddenWord); // 
       String guess = scanner.nextLine();
