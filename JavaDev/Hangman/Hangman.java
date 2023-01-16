@@ -141,7 +141,7 @@ public static void main(String[] args) {
         }
       } else {
         System.out.println("Incorrect.");
-        printHangman(incorrectGuesses++);
+        printHangman(++incorrectGuesses);
       }
     }
     if (incorrectGuesses == maxIncorrectGuesses) {
