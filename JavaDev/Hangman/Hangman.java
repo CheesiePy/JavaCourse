@@ -1,18 +1,55 @@
 package JavaDev.Hangman;
 
+import java.io.BufferedReader;
+import java.util.Random;
 import java.util.Scanner;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Hangman {
-  public static void main(String[] args) {
-    // read words from a file 
-
+  /**
+ * @param args
+ */
+public static void main(String[] args) {
+    // read words from a file and store them in an array
+    String[] words = new String[100];
+    String filepath = "/home/CheesiePy/Documents/GitHub/JavaCourse/JavaDev/Hangman/tvshows.txt";
+    BufferedReader reader = null;
+    Random rand = new Random();
+    int counter = 0;
+    try {    
+        reader = new BufferedReader(new FileReader(filepath));
+        
+        String topic = reader.readLine();
+        String line = "";
+        while (line != null ) {
+          line = reader.readLine();
+          
+          if(line == null){
+              break;
+          }
+          words[counter++] = line;
+        }
     
-    String[] words = {"java", "programming", "computer"}; //
+    } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+        System.exit(0);
+    }finally{
+        //Close the file
+        try {
+          if (reader != null) {
+            reader.close();
+          }
+        } catch (IOException e) {
+          e.printStackTrace();
+    }
+
     // String topic;
-    String wordToGuess = words[(int) (Math.random() * words.length)];
+    String wordToGuess = words[rand.nextInt(counter)];
     String hiddenWord = "";
     for (int i = 0; i < wordToGuess.length(); i++) {
-      hiddenWord += "_";
+      hiddenWord += "_ ";
     }
     int maxIncorrectGuesses = 6;
     int incorrectGuesses = 0;
@@ -41,4 +78,5 @@ public class Hangman {
       System.out.println("You lose. The word was " + wordToGuess);
     }
   }
+}
 }
