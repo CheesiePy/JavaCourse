@@ -10,6 +10,75 @@ public class Hangman {
   /**
  * @param args
  */
+
+ public static void printHangman(int stages) {
+    switch (stages) {
+        case 0:
+            System.out.println("  _____");
+            System.out.println(" |     |");
+            System.out.println(" |");
+            System.out.println(" |");
+            System.out.println(" |");
+            System.out.println(" |");
+            System.out.println(" |");
+            break;
+        case 1:
+            System.out.println("  _____");
+            System.out.println(" |     |");
+            System.out.println(" |     O");
+            System.out.println(" |");
+            System.out.println(" |");
+            System.out.println(" |");
+            System.out.println(" |");
+            break;
+        case 2:
+            System.out.println("  _____");
+            System.out.println(" |     |");
+            System.out.println(" |     O");
+            System.out.println(" |     |");
+            System.out.println(" |     |");
+            System.out.println(" |");
+            System.out.println(" |");
+            break;
+        case 3:
+            System.out.println("  _____");
+            System.out.println(" |     |");
+            System.out.println(" |     O");
+            System.out.println(" |    \\|");
+            System.out.println(" |     |");
+            System.out.println(" |");
+            System.out.println(" |");
+            break;
+        case 4:
+            System.out.println("  _____");
+            System.out.println(" |     |");
+            System.out.println(" |     O");
+            System.out.println(" |    \\|/");
+            System.out.println(" |     |");
+            System.out.println(" |");
+            System.out.println(" |");
+            break;
+        case 5:
+            System.out.println("  _____");
+            System.out.println(" |     |");
+            System.out.println(" |     O");
+            System.out.println(" |    \\|/");
+            System.out.println(" |     |");
+            System.out.println(" |    /");
+            System.out.println(" |");
+            break;
+        case 6:
+            System.out.println("  _____");
+            System.out.println(" |     |");
+            System.out.println(" |     O");
+            System.out.println(" |    \\|/");
+            System.out.println(" |     |");
+            System.out.println(" |    / \\");
+            System.out.println(" |");
+            break;
+    }
+}
+
 public static void main(String[] args) {
     // read words from a file and store them in an array
     String[] words = new String[100];
@@ -72,7 +141,7 @@ public static void main(String[] args) {
         }
       } else {
         System.out.println("Incorrect.");
-        incorrectGuesses++;
+        printHangman(incorrectGuesses++);
       }
     }
     if (incorrectGuesses == maxIncorrectGuesses) {
